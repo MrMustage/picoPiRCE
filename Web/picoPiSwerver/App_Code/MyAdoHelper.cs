@@ -36,7 +36,7 @@ public class MyAdoHelper
         string path = HttpContext.Current.Server.MapPath("App_Data/");//מיקום מסד בפורוייקט
         path += fileName;
         //string path = HttpContext.Current.Server.MapPath("App_Data/" + fileName);//מאתר את מיקום מסד הנתונים מהשורש ועד התקייה בה ממוקם המסד
-        string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\noamr\Desktop\picoInject\picoPiSwerver\App_Data\Database.mdf;Integrated Security=True";
+        string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\noamr\Documents\GitHub\picoPiRCE\Web\picoPiSwerver\App_Data\Database.mdf;Integrated Security=True";
         SqlConnection conn = new SqlConnection(connString);
         return conn;
 

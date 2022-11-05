@@ -12,8 +12,8 @@ public partial class main : System.Web.UI.Page
     public string tbl;
     protected void Page_Load(object sender, EventArgs e)
     {
-        string db = "C:\\Users\\noamr\\Desktop\\picoInject\\picoPiSwerver\\App_Data\\Database.mdf";
-        string commandPath = "C:\\Users\\noamr\\Desktop\\picoInject\\picoPiSwerver\\command.txt";
+        string db = "C:\\Users\\noamr\\Documents\\GitHub\\picoPiRCE\\Web\\picoPiSwerver\\App_Data\\Database.mdf";
+        string Path = "C:\\Users\\noamr\\Documents\\GitHub\\picoPiRCE\\Web\\picoPiSwerver\\";
 
         if (Request.Form["submit"] != null)
         {
@@ -28,12 +28,12 @@ public partial class main : System.Web.UI.Page
         }
 
 
-        using (StreamWriter writer = new StreamWriter(commandPath))
+        using (StreamWriter writer = new StreamWriter(Path+ "command.txt"))
         {
             writer.WriteLine(injection);
         }
         // Read a file  
-        string readText = File.ReadAllText(commandPath);
+        string readText = File.ReadAllText(Path+ "command.txtA");
         Console.WriteLine(readText);
 
 
